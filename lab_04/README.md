@@ -7,3 +7,10 @@ In order for this file to be saved we must run the container with special flag a
 docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feedback-node:volume
 
 To verify we can stop the container and run it again, we will be able succesfuly to revisit http:localhost:port_number/feedback/example.txt
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Other option is the use of Bind mount and anonymous volumes which will allow us to manipulate the code which will reflect on the running application
+in real time. For this use case named volume , bind mount and anonymous volume must be created with the following commands 
+
+docker run -d -p 3000:80  --name feedback-app -v feedback:/app/feedback -v "C:\Users\tppar\Desktop\Docker\4th:/app" -v /app/node_modules feedback-node:volume
