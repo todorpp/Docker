@@ -11,6 +11,6 @@ To verify we can stop the container and run it again, we will be able succesfuly
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 Other option is the use of Bind mount and anonymous volumes which will allow us to manipulate the code which will reflect on the running application
-in real time. For this use case named volume , bind mount and anonymous volume must be created with the following commands 
+in real time. For this use case named volume , bind mount with read only ability  and anonymous volume must be created with the following commands 
 
-docker run -d -p 3000:80  --name feedback-app -v feedback:/app/feedback -v "C:\Users\tppar\Desktop\Docker\4th:/app" -v /app/node_modules feedback-node:volume
+docker run -d -p 3000:80  --name feedback-app -v feedback:/app/feedback -v "C:\Users\tppar\Desktop\Docker\4th:/app:ro" -v /app/node_modules feedback-node:volume
