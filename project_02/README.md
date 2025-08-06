@@ -18,4 +18,15 @@ line 79 `mongodb://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWOR
 
 7 Under Docker configuration tab on command field add node,app.js
 
-8 Add the enviorment variables as key-value pair 
+8 Add the enviorment variables as key-value pair / MONGODB_URL value must be localhost for this field /
+
+Steps Mongodb:
+
+1 Create new container using image mongo
+
+2 Map port 27017 , and add mongo enviorment variables credentials
+
+3 Create service inside the cluster tab , add the task definition, choose the VPC which was created while creating the cluster include the subnets, and select Application Load Balancer
+
+4 In Configure Routing step choose Target type - IP 
+
