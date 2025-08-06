@@ -6,7 +6,7 @@ Steps Backend:
 line 79 `mongodb://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@mongodb:27017/course-goals?authSource=admin`, ----->
 `mongodb://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_URL}:27017/course-goals?authSource=admin`,
 
-2 Add the enviorment variable in the file 
+2 Add the enviorment variable in the file and in the Docker file
 
 3 Build the image and push it to repository 
 
@@ -17,3 +17,5 @@ line 79 `mongodb://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWOR
 6 Add Container and map port 80
 
 7 Under Docker configuration tab on command field add node,app.js
+
+8 Add the enviorment variables as key-value pair 
