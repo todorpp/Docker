@@ -30,3 +30,5 @@ Steps Mongodb:
 
 4 In Configure Routing step choose Target type - IP 
 
+5 We can verify if everything is working visiting the Public IP, also we can use Postman to send POST and GET requests on x.x.x.x/goals   
+
