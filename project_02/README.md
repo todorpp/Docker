@@ -39,5 +39,16 @@ and for the EFS choose the new security group
 
 8 In Task Definition Create new revision, and Add Volume and pick EFS type with the files system which we created
 
-9 Go to the mongodb container and in the Mount points type /data/db this is the path where mongdb will write 
+9 Go to the mongodb container and in the Mount points type /data/db this is the path where mongdb will write . Once the revision is complete our data will be persistent 
+
+Steps Frontend:
+
+1 Adjustments for the source code are required in lines 22, 47, 82
+ const response = await fetch(backendUrl + '/goals/' + goalId, {
+ 
+2 We will use Multi Stage builded Docker file to create and push a image to the repository. The code will be executed and send copied to the nginx server 
+The build syntax will be: docker build -f frontend/Dockerfile.prod -t example/example_name ./frontend
+
+
+
 
