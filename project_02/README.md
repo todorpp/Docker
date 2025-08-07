@@ -43,13 +43,21 @@ and for the EFS choose the new security group
 
 Steps Frontend:
 
-1 Adjustments for the source code are required in lines 22, 47, 82
+1 Adjustments for the source code are required in lines 22, 47, 82  and const backendURL must be created with the URL of the backend 
  const response = await fetch(backendUrl + '/goals/' + goalId, {
  
 2 We will use Multi Stage builded Docker file to create and push a image to the repository. The code will be executed and send copied to the nginx server 
 The build syntax will be: docker build -f frontend/Dockerfile.prod -t example/example_name ./frontend
 
 3 New Tak Definition should be created frontend and backend can't be in same task communicating on same port 80 . In such situation also option is backend port to be changed , or frontend and backend to be merged in single container
+
+4 New Load Balancer must be created in same VPC's with the first LB , same Security Group, and target type should be IP
+
+5 Create a Service and add VPC's and Security Groups 
+
+6 We can verify with the frontend URL if everything works 
+
+
 
 
 
