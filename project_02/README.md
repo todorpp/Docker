@@ -49,6 +49,10 @@ Steps Frontend:
 2 We will use Multi Stage builded Docker file to create and push a image to the repository. The code will be executed and send copied to the nginx server 
 The build syntax will be: docker build -f frontend/Dockerfile.prod -t example/example_name ./frontend
 
+3 New Tak Definition should be created frontend and backend can't be in same task communicating on same port 80 . In such situation also option is backend port to be changed , or frontend and backend to be merged in single container
+
+
+
 
 
 
